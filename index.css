@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 200%; /* Adjust based on content height to ensure scrollability */
+    overflow-x: hidden;
+    background-color: rgb(250, 250, 250);
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding does not add to the width */
+}
+
+h1, h2, p {
+    margin: 20px 0;
+    letter-spacing: 20px; /* Initial letter spacing */
+    white-space: nowrap; /* Prevent text wrapping */
+    color: rgb(23, 23, 84);
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 52.5px;
+    line-height: 0.9;
+}
+
+h2 {
+    font-family: Impact, Futura, sans-serif;
+    font-size: 35px;
+    line-height: 1;
+}
+
+p {
+    font-family: Futura, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+img {
+        display: block;
+        max-width: none; /* Allows the image to stretch beyond its natural width if needed */
+        width: 100%; /* Adjust this value to resize the image if needed */
+        margin-top: 20px; /* Space from the preceding text */
+        height: 400px; /* Maintain aspect ratio */
+        margin-left: 0; /* Align image to the left */
+        /* mix-blend-mode: multiply; */
+    }
+    
+    .fullscreen-view {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1050; /* Ensure it's above other content */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .fullscreen-view img {
+        max-width: 90%; /* Limit image width, maintaining aspect ratio */
+        max-height: 80%; /* Limit image height, maintaining aspect ratio */
+        object-fit: contain; /* Ensures aspect ratio is maintained without stretching */
+    }
+    
+    
+    .fullscreen-view #fullscreenCaption {
+        color: white;
+        margin-top: 20px;
+    }
+    
+    #closeFullscreen {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: transparent; /* No background */
+        color: white; /* Text color, adjust as needed */
+        border: none; /* No border */
+        font-family: Futura;
+        font-size: 20px; /* Font size for visibility */
+        text-decoration: none; /* No underline */
+    }
+    
+    #closeFullscreen:hover, #closeFullscreen:focus {
+        text-decoration: underline; /* Underline on hover/focus for interaction feedback */
+    }
+    
+    
